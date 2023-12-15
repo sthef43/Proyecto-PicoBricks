@@ -1,0 +1,1486 @@
+:root{
+    --multiple-color: linear-gradient(97deg,#b981f9 0,#b981f9 9%,#9f62f7 27%,#f13c0d 47%,#f15143 63%,#eda800 83%,#f0aa0f 100%);
+    --tamaño-h2:2rem;
+    --tamanio-texto-h1:3rem;
+    --tamanio-texto-h3:1.8rem;
+    --tamanio-texto-precio:2.6rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.iconos-en-pantalla{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    justify-content: center;
+    align-items: flex-end;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.fondo-opaco{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 1;
+}
+.fondo-opaco.active{
+    display: block;
+}
+
+/* MENU HAMBURGUESA Y OTROS LINKS QUE ESTAN EN LA BARRA DE NAVBAR DEL MODO MOBILE */
+.menu-hamburguesa,
+.menu-usuario-busqueda{
+    max-width: 360px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    position: fixed;
+    z-index: 2;
+    overflow: scroll;
+    height: 100vh;
+    left: -360px;
+    transition: left .5s ease;
+}
+.menu-usuario-mobile,
+.menu-shop-mobile{
+    max-width: 360px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    position: fixed;
+    z-index: 2;
+    overflow: scroll;
+    height: 100vh;
+    right: -360px;
+    transition: right .5s ease;
+}
+.menu-hamburguesa.active,
+.menu-usuario-busqueda.active{
+    left: 0;
+}
+.menu-usuario-mobile.active,
+.menu-shop-mobile.active{
+    right: 0px;
+}
+.menu-hamburguesa .distintos-menus{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.menu-hamburguesa .text-y-imagen,
+.menu-hamburguesa .links-con-flechas,
+.menu-usuario-mobile .text-y-imagen,
+.menu-shop-mobile .text-y-imagen,
+.menu-usuario-busqueda .text-y-imagen{
+    padding: 15px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-hamburguesa .links{
+    padding: 15px 20px;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-hamburguesa .account{
+    padding: 15px 20px;
+    width: 100%;
+    border-bottom: 1px solid rgb(192, 190, 190);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.menu-hamburguesa .distintos-menus i{
+    margin-right: 5px;
+    height: 20px;
+    font-size: 1.5rem;
+}
+.menu-hamburguesa .account a,
+.menu-hamburguesa .links a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: black;
+}
+.menu-hamburguesa .links:nth-child(7){
+    justify-content: flex-start;
+}
+/* MENU HAMBURGUESA Y OTROS LINKS QUE ESTAN EN LA BARRA DE NAVBAR DEL MODO MOBILE */
+
+/* FORMULARIO DE AYUDA*/
+.container-formulario-pregunta{
+    width: 95%;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    overflow: scroll;
+    left: 8px;
+    top: 35px;
+    height: 440px;
+    z-index: 10;
+    display: none;
+}
+.container-formulario-pregunta.active{
+    display: flex;
+}
+.container-formulario-pregunta #head-fixed{
+    padding: 10px;
+    width: 94%;
+    max-width: 700px;
+    text-align: center;
+    border-bottom: 1px solid;
+    position: fixed;
+    background: white;
+}
+.container-formulario-pregunta .text-superior-formulario{
+    margin: 50px 0;
+    padding: 0 0 20px;
+    text-align: center;
+    width: 60%;
+    border-bottom: 1px solid black;
+}
+.container-formulario-pregunta .text-superior-formulario p{
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+.container-formulario-pregunta .contenido-formulario-pregunta{
+    width: 80%;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+}
+.container-formulario-pregunta .inputs-text p{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.container-formulario-pregunta .inputs-radio{
+    margin: 10px 0;
+}
+.container-formulario-pregunta .inputs-radio p{
+    font-size: 1.3rem;
+    margin: 5px 0;
+}
+.container-formulario-pregunta .inputs-radio input{
+    margin: 0 2px;
+    position: relative;
+    left: 0px;
+    top: 2px;
+    left: 3px;
+}
+/* FORMULARIO DE AYUDA*/
+
+/* SUB MENUS DENTRO DEL MENU HAMBURGUESA */
+.sub-menu{
+    max-width: 360px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    position: fixed;
+    left: -360px;
+    z-index: 3;
+    overflow: scroll;
+    height: 100vh;
+    transition: left .5s ease;
+}
+.sub-menu.active{
+    left: 0;
+}
+.sub-menu .links-menu-hamburguesa-lear{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.sub-menu .volver-atras{
+    width: 100%;
+    background-color: rgb(177, 177, 177);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.sub-menu .volver-atras i{
+    padding: 20px 20px;
+}
+.sub-menu .links-menu-hamburguesa-lear ul{
+    width: 100%;
+}
+.sub-menu .links-menu-hamburguesa-lear li{
+    padding: 10px 20px;
+    list-style: none;
+    margin: 10px 0;
+    border-bottom: 1px solid black;
+}
+.sub-menu .links-menu-hamburguesa-lear p{
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 10px 20px;
+    list-style: none;
+    margin: 10px 0 0 0;
+    border-bottom: 1px solid black;
+}
+.sub-menu .links-menu-hamburguesa-lear a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+.sub-menu .links-menu-hamburguesa-lear h2{
+    font-size: 1.6rem;
+    margin-left: 60px;
+}
+.menu-usuario-busqueda .inputs-sub-menu-buscador{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.menu-usuario-mobile .formulario-crear-usuario{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 0 20px;
+}
+.menu-usuario-mobile .formulario-crear-usuario label span{
+    color: red;
+}
+.menu-usuario-mobile .formulario-crear-usuario label{
+    font-size: 1.3rem;
+}
+.menu-usuario-mobile .formulario-crear-usuario a{
+    text-align: center;
+    font-size: 1.3rem;
+    color: rgb(44, 44, 44);
+}
+.menu-shop-mobile .content-menu-shop-mobil{
+    padding: 20px 20px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.menu-shop-mobile .content-menu-shop-mobil p{
+    margin: 10px 0;
+    font-size: 1.4rem;
+}
+.menu-shop-mobile .content-menu-shop-mobil p:nth-child(2){
+    margin-bottom: 0px;
+    text-align: center;
+    color: red;
+}
+/* SUB MENUS DENTRO DEL MENU HAMBURGUESA */
+
+/* BARRA DE NAVEGACION INFERIOR QUE ESTA EN EL MODO MOBILE*/
+.barra-abajo{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding: 10px 16px;
+    z-index: 3;
+}
+.barra-abajo p{
+    font-size: 1.3rem;
+}
+.barra-abajo #icono-barra{
+    font-size: 2rem;
+}
+#sub-menu-buscador h2{
+    margin: 15px;
+}
+/* BARRA DE NAVEGACION INFERIOR QUE ESTA EN EL MODO MOBILE*/
+
+
+/* LOGO EN EL HEAD EN MODO DESKTOP*/
+
+.header-logo{   
+    padding: 20px 30px;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-logo #logo-dektop{
+    width: 100px;
+}
+#run-ide{
+    padding: 10px 50px;
+    background-color: rgb(231, 51, 51);
+    box-shadow: 0px 7px 0px 0px #c51a0a;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+/* LOGO EN EL HEAD EN MODO DESKTOP*/
+
+/* NAVBAR EN EL MODO MOBILE*/
+.nav-bar-mobile{
+    padding:10px 5px;
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(184, 183, 183);
+}
+.nav-bar-mobile #logo{
+    max-width: 100%;
+    width: 60px;
+    height: auto;
+}
+.nav-bar-mobile i{
+    font-size: 2.4rem;
+    margin: 0 9px;
+    cursor: pointer;
+}
+/* NAVBAR EN EL MODO MOBILE*/
+
+/* NAVBAR EN EL MODO DESKTOP*/
+.nav-bar-desktop{
+    display: none;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-bar-desktop .links-navbar{
+    position: relative;
+    width: 50%;
+    text-align: center;
+    margin: 0 0 0 40px;
+    display: inline-block; 
+}
+.nav-bar-desktop .links-navbar li{
+    margin: 10px 10px;
+    display: inline-block;
+}
+.nav-bar-desktop .links-navbar a{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+.nav-bar-desktop .menu-rapido{
+    padding: 0 40px 0 0;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.nav-bar-desktop .menu-rapido i{
+    font-size: 1.7rem;
+    margin: 0 10px;
+}
+.nav-bar-desktop .menu-rapido a{
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: black;
+}
+.nav-bar-desktop .links-navbar .dropdown{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: left;
+    padding-top: 20px;
+}
+.nav-bar-desktop .links-navbar .dropdown li{
+    padding: 5px 0;
+    width: 90%;
+    border-bottom: 1px solid rgb(167, 167, 167);
+    margin: 5px 10px;
+}
+.nav-bar-desktop #iconos-dropdown{
+    margin-right: 5px;
+}
+/* NAVBAR EN EL MODO DESKTOP*/
+
+/* DESCRIPTION DE BIENVENIDA*/
+.imagen-header{
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.description{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.description .text-descripcion{
+    max-width: 455px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 10px;
+}
+#text-multiple-color{
+    margin-bottom: 30px;
+    font-size: 2rem;
+    background: linear-gradient(97deg,#b981f9 0,#b981f9 9%,#9f62f7 27%,#f13c0d 47%,#f15143 63%,#eda800 83%,#f0aa0f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+.description .text-descripcion h1{
+    font-size: 3rem;
+    margin-bottom: 27px;
+}
+.description .text-descripcion p{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+.description .botones-inicio{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+/* DESCRIPTION DE BIENVENIDA*/
+
+/* BOTONES Y INPUTS CON ID*/
+#boton-buscar{
+    padding: 15px;
+    margin-left: -20px;
+    height: auto;
+    background-color: rgb(223, 223, 223);
+    border: none;
+    border-bottom: 1px solid rgb(195, 195, 195);
+}
+#boton-buscar i{
+    margin: 0;
+}
+#botones-en-pantalla-pregunta{
+    padding: 5px 10px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-top: 1px solid;
+    cursor: pointer;
+}
+#botones-en-pantalla-flecha{
+    padding: 5px 10px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+#boton-submit-formulario{
+    height: 40px;
+    background: #1e1e1e;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin: 10px 0 20px 0;
+}
+#text-area-formulario{
+    margin: 10px 0;
+    width: 90%;
+    height: 40px;
+}
+#input-formulario-pregunta{
+    margin: 5px 0;
+    padding: 0 5px;
+    width: 100%;
+    height: 40px;
+}
+#cerrar-menus{
+    background-color: transparent;
+    border: none;
+}
+#cerrar-menu-formulario{
+    padding: 5px 10px;
+    background-color: black;
+    border: none;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 5;
+    cursor: pointer;
+}
+#crear-usuario{
+    height: 40px;
+    margin: 20px 0;
+    background: transparent;
+    border: 1px solid;
+    font-weight: bold;
+}
+#login-usuario{
+    height: 40px;
+    background: #1e1e1e;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin: 10px 0 20px 0;
+}
+#usuario-input{
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0 10px 0;
+}
+#buscador-sub-menu{
+    padding: 15px 15px;
+    margin: 15px 15px;
+    width: 80%;
+    background-color: rgb(223, 223, 223);
+    border: none;
+    border-bottom: 1px solid rgb(195, 195, 195);
+}
+#boton-naranja{
+    max-width: 210px;
+    width: 60%;
+    padding: 11px 25px;
+    margin: 20px 10px;
+    background-color: #f15143;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 7px 0px 0px #f52614;
+    font-size: 2rem;
+    color: white;
+    line-height: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: .45s;
+}
+#boton-amarillo{    
+    margin: 10px 10px;
+    margin-bottom: 20px;
+    max-width: 210px;
+    width: 60%;
+    padding: 10px 35px;
+    border: none;
+    background-color: rgb(216, 166, 72);
+    box-shadow: 0px 7px 0px 0px rgb(204, 134, 3);
+    border-radius: 20px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .45s;
+}
+#imagen-header{
+    max-width: 100%;
+    height: auto;
+    width: 95%;
+    object-fit: contain;
+}
+#robot-saludando{
+    max-width: 100%;
+    height: auto;
+    margin: 30px 0px;
+    width: 70%;
+}
+#iconos-navbar{
+    margin: 0 10px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+#social-icon{
+    margin: 20px 10px 40px;
+    font-size: 2rem;
+    width: 40px;
+    color: rgb(65, 65, 65);
+}
+#enter-email{
+    color: rgb(136, 134, 134);
+    max-width: 320px;
+    width: 70%;
+    background-color: rgb(36, 35, 35);
+    padding: 0 0 0 8px;
+    border: none;
+    font-family: 'Poppins';
+    height: 50px;
+    transition: .45s;
+}
+#submit{
+    width: 40%;
+    height: 50px;
+    background-color: white;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: .45s;
+}
+#enter-email::placeholder{
+    color: rgb(190, 188, 188);
+}
+#cerrar-menu-learn{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+#shop-menu{
+    position: relative;
+    z-index: 1;
+}
+/* BOTONES,INPUTS Y IMAGENES CON ID*/
+
+/* PRODUCTOS */
+.products{
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.products .product{
+    margin-bottom: 30px;
+    text-align: center;
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.products .product h2{
+    font-size: var(--tamaño-h2);
+}
+.products .product span{
+    text-decoration: line-through;
+    color: rgb(201, 201, 201);
+    font-size: 1.9rem;
+    font-weight: 100;
+}
+.products .product #precio{
+    font-size: var(--tamanio-texto-precio);
+}
+.products .product #descuento{
+    background-color: rgb(236, 79, 79);
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    padding: 5px 15px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+}
+.products .product #adicion-car-button{
+    padding: 10px 25px;
+    margin: 20px 0px;
+    background-color: #d6c631;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 4px 0px 0px #8f8101;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: .45s;
+}
+.products .product #image-product{
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+/* PRODUCTOS */
+
+/* DESCRIPCION DE PICO PARK*/
+.description-picopark{
+    text-align: center;
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.description-picopark .text-descripcion-picopark{
+    padding: 0 16px;
+    width: 100%;
+}
+.description-picopark .text-descripcion-picopark h2{
+    font-size: var(--tamaño-h2);
+}
+.description-picopark .text-descripcion-picopark p{
+    margin: 10px 0 40px 0;
+    font-size: 1.6rem;
+}
+.description-picopark #placa-y-robot{
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+/* DESCRIPCION DE PICO PARK*/
+
+.carrousel{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border-left: 20px solid white;
+    border-right: 20px solid white;
+}
+.carrousel .cards-direction{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+    text-align: left;
+}
+.carrousel .card-reseña{
+    margin: 20px 20px;
+    width: 100%;
+    transition: transform 1s ease;
+    min-width: 175px;
+    position: relative;
+}
+.carrousel .inputs{
+    display: flex;
+    flex-direction: row;
+}
+.carrousel .inputs input[type="radio"]{
+    margin: 0 6px;
+    accent-color: red;
+    height: 18px;
+}
+.carrousel .card-reseña #imagen-carrusel{
+    max-width: 100%;
+    height: auto;
+    margin: 0px 0 12px 0;
+    width: 100%;
+}
+
+.carrousel h1{
+    font-size: 3rem;
+}
+.carrousel .card-reseña h2{
+    margin: 6px 0;
+}
+.carrousel .card-reseña p{
+    font-size: 1.1rem;
+}
+
+/* CARACTERISTICAS DE PICO PARK*/
+.caracteristicas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.caracteristicas .caracteristicas-texto{
+    max-width: 100%;
+    width: 70%;
+}
+.caracteristicas .caracteristicas-texto h2{
+    margin-bottom: 16px;
+    font-size: var(--tamaño-h2);
+    font-weight: bold;
+}
+.caracteristicas .caracteristicas-texto p{
+    font-size: 1.6rem;
+}
+.caracteristicas .caracteristicas-texto span{
+    font-weight: bold;
+}
+.caracteristicas #robot-placa-mano{
+    margin: 60px 0;
+    max-width: 100%;
+    width: 55%;
+    height: auto;
+}
+.caracteristicas .caracteristicas-texto #text-multiple-color{
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: lighter    ;
+    background: linear-gradient(97deg,#b981f9 0,#b981f9 9%,#9f62f7 27%,#f13c0d 47%,#f15143 63%,#eda800 83%,#f0aa0f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.caracteristicas #Ide{
+    max-width: 100%;
+    height: auto;
+    margin: 40px 0;
+    width: 100%;
+}
+.info-producto{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info-producto .info{
+    margin: 30px 0;
+    max-width: 100%;
+    width: 90%;
+    text-align: center;
+}
+.info-producto .info h2{
+    font-size: 3rem;
+    font-weight: lighter;
+}
+.info-producto .info p{
+    margin-top: 10px;
+    font-size: 2rem;
+}
+#img-info{
+    color: rgb(68, 68, 68);
+    font-size: 3rem;
+}
+/* CARACTERISTICAS DE PICO PARK*/
+
+/* PROJECTOS ECHOS CON PICO PARK*/
+.guia-de-projectos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+}
+.guia-de-projectos .projecto{
+    margin: 20px 0;
+    text-align: center;
+    width: 95%;
+}
+.guia-de-projectos .projecto h2{
+    font-size: 2.2rem;
+    margin: 16px 0;
+}
+.guia-de-projectos .projecto p{
+    font-size: 1.3rem;
+} 
+.guia-de-projectos #imagen-projecto{
+    border-radius: 20px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+/* PROJECTOS ECHOS CON PICO PARK*/
+
+/* PLATAFORMAS DE DESARROLLO, AYUDA Y LIBROS*/
+.plataformas-desarrollo{
+    margin: 70px 0 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.plataformas-desarrollo .img-plataformas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1 0;
+    justify-content: center;
+}
+.plataformas-desarrollo #img-marca{
+    min-width: 40px;
+    width: 19%;
+    height: auto;
+    object-fit: contain;
+    margin: 22px;
+}
+.libros-info{
+    padding: 0 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.libros-info .img-books{
+    margin-top: 40px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+.libros-info #img-books-individual{
+    object-fit: contain;
+    margin: 10px 0;
+    width: 100%;
+    transition: .45s;
+}
+.libros-info p{
+    line-height: 26px;
+    font-size: 1.4rem;
+}
+.libros-info span{
+    font-weight: bold;
+}
+/* PLATAFORMAS DE DESARROLLO, AYUDA Y LIBROS*/
+
+/* FOOTER EN MODO MOBILE*/
+.pie-pagina-mobile{
+    margin-top: 80px;
+    padding: 0 25px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.pie-pagina-mobile .links-pagina-pie{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    display: none;
+}
+.pie-pagina-mobile .menu-desplegable{
+    cursor: pointer;
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.pie-pagina-mobile .text-pie{
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+.pie-pagina-mobile .text-pie p{
+    font-size: 1.3rem;
+}
+.pie-pagina-mobile .menu-desplegable h2,
+.pie-pagina-mobile .text-pie h2{
+    color: rgb(65, 65, 65);
+    padding: 0 0 5px 0;
+    font-size: 1.6rem;
+}
+.pie-pagina-mobile .inputs-pie{
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.pie-pagina-mobile .links-desplegables{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+}
+.pie-pagina-mobile .menu-desplegable .text-menu{
+    margin: 0px 0 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(65, 65, 65);
+
+}
+.pie-pagina-mobile .menu-desplegable.active .links-desplegables{
+    display: flex;
+}
+.pie-pagina-mobile .links-desplegables a{
+    margin: 5px 0;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: rgb(65, 65, 65);
+}
+.pie-pagina-mobile .icon-socials{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* FOOTER EN MODO MOBILE*/
+
+/*FOOTER EN MODO DESKTOP*/
+.pie-pagina-desktop{
+    display: none;
+    margin-top: 100px;
+    padding: 0 16px;
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.pie-pagina-desktop .links-pagina-pie{
+    display: flex;
+    flex-direction: row;
+}
+.pie-pagina-desktop .links-pagina-pie ul{
+    margin: 0 80px 0 0;
+}
+.pie-pagina-desktop .links-pagina-pie li{
+    margin: 10px 0;
+    list-style: none;
+}
+.pie-pagina-desktop .links-pagina-pie a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: rgb(54, 54, 54);
+}
+.pie-pagina-desktop .inputs-desktop{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.pie-pagina-desktop .ingresar-email{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+}
+/*FOOTER EN MODO DESKTOP*/
+
+/* EFECTOS BOTONES Y LINKS */
+
+#boton-naranja:hover,
+#boton-amarillo:hover{
+    transform: translateY(-5px);
+}
+.products .product #adicion-car-button:hover{
+    transform: translateY(-5px);
+    background-color: #008f89
+}
+.libros-info #img-books-individual:hover{
+    transform: translateY(-5px);
+}
+#submit:hover{
+    background-color: black;
+    color: whitesmoke;
+}
+.nav-bar-desktop .links-navbar .link-dropdwon:hover .dropdown{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    animation: scale-in-ver-top 1s ease-in-out both;
+}
+.nav-bar-desktop .links-navbar li a,
+.nav-bar-desktop .menu-rapido #sign-in{
+    position: relative;
+    transition: .45s;
+}
+.nav-bar-desktop ul li a::before,
+.nav-bar-desktop .menu-rapido #sign-in::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    visibility: hidden;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.5s ease;
+}
+.nav-bar-desktop ul li a:hover::before,
+.nav-bar-desktop .menu-rapido #sign-in:hover::before{
+    visibility: visible;
+    transform: scaleX(1);
+    transform-origin: right;
+}
+#iconos-navbar:hover{
+    transform: scale(1.4);
+}
+.pie-pagina-desktop .links-pagina-pie a:hover{
+    text-decoration: underline;
+}
+
+/* EFECTOS BOTONES Y LINKS */
+
+@media (min-width:375px){
+    .carrousel .card-reseña{
+        min-width: 70%;
+    }
+}
+@media (min-width:425px){
+    .carrousel .card-reseña{
+        min-width: 65%;
+    }
+}
+@media (min-width:551px){
+    .carrousel .card-reseña{
+        min-width: 65%;
+    }
+}
+@media (min-width:750px) {
+    .description .text-descripcion{
+        max-width: 590px;
+    }
+    .description .text-descripcion h1{
+        font-size: 3.5rem;
+    }
+    .description .text-descripcion p{
+        font-size: 1.9rem;
+    }
+    .description .botones-inicio{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        height: 100px;
+    }
+
+    .libros-info .img-books{
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-formulario-pregunta{
+        top: 50px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        height: 500px;
+    }
+    .carrousel .card-reseña{
+        min-width: 66%;
+    }
+}
+@media (min-width:768px){
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        flex: 1 2 0;
+        justify-content: center;
+    }
+    .products .product{
+        margin: 15px;
+        min-width: 300px;
+        width: 45%;
+    }
+    .description-picopark .text-descripcion-picopark{
+        min-height: 400px;
+        width: 58%;
+    }
+
+    .description-picopark #placa-y-robot{
+        max-width: 100%;
+        width: 75%;
+    }
+
+    .caracteristicas #robot-placa-mano{
+        max-width: 100%;
+        width: 50%;
+    }
+    .info-producto{
+        justify-content: center;
+        flex-wrap: wrap;
+        display: flex;
+        flex: 1 1 0;
+        flex-direction: row;
+    }
+    .info-producto .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 30%;
+        min-width: 232px;
+        margin: 12px;
+        height: 480px;
+    }
+
+    .guia-de-projectos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        flex: 1 1 0;
+    }
+    .guia-de-projectos .projecto{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 23px;
+        min-width: 300px;
+        width: 44%
+    }
+
+    .plataformas-desarrollo .img-plataformas{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .plataformas-desarrollo #img-marca{
+        width: 14%;
+        min-width: 109px;
+    }
+
+    .libros-info .img-books{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .libros-info .img-books #img-books-individual{
+        width: 30%;
+        margin: 0 12px;
+        box-shadow: 15px 10px 5px 0px rgba(77,72,72,0.6);
+
+    }
+    .pie-pagina-mobile{
+        display: none;
+    }
+    .pie-pagina-desktop{
+        display: flex;
+    }
+
+    .carrousel{
+        border-left: 40px solid white;
+        border-right: 40px solid white;
+    }
+    .carrousel .cards-direction{
+        width: 85%;
+    }
+    .carrousel .card-reseña{
+        min-width: 60%;
+    }
+}
+@media (min-width:992px) {
+    .container-formulario-pregunta{
+        max-width: 700px;
+    }
+    .pie-pagina-desktop{
+        display: flex;
+        flex-direction: row;
+    }
+    .pie-pagina-desktop .inputs-desktop{
+        margin: 0;
+    }
+
+    .carrousel{
+        width: 120%;
+    }
+    .carrousel .card-reseña{
+        min-width: 50%;
+    }
+    .carrousel .cards-direction{
+        width: 75%;
+    }
+}
+@media (min-width:1025px){
+    .barra-abajo{
+        display: none;
+    }
+    .header-logo{
+        display: flex;
+    }
+    .nav-bar-desktop{
+        display: flex;
+    }
+    .nav-bar-mobile{
+        display: none;
+    }
+    .description{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .description #robot-saludando{
+        max-width: 100%;
+        width: 40%;
+    }
+    .description .text-descripcion{
+        width: 52%;
+    }
+
+    .products .product{
+        width: 22%;
+        min-width: 200px;
+    }
+    .products .product #descuento{
+        top: 0;
+        left: 0;
+    }
+    .description-picopark{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .description-picopark #placa-y-robot{
+        max-width: 100%;
+        width: 100%;
+    }
+    .description-picopark .text-descripcion-picopark{
+        width: 43%;
+        margin: 0 40px;
+    }
+    .description-picopark .text-descripcion-picopark p{
+        font-size: 1.9rem;
+    }
+    .description-picopark .placa-y-robot{
+        min-width: 300px;
+        width: 40%;
+    }
+
+    .caracteristicas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    }   
+    .caracteristicas .caracteristicas-ide{
+        min-width: 100px;
+        width: 44%;
+    }
+    .caracteristicas #Ide{
+        max-width: 100%;
+        width: 70%;
+    }
+    .caracteristicas .caracteristicas-texto{
+        width: 50%;
+        margin: 0 20px;
+    }
+    .caracteristicas .caracteristicas-texto p{
+        font-size: 1.9rem;
+    }
+    .caracteristicas #robot-placa-mano{
+        max-width: 100%;
+        width: 35%;
+    }
+
+    .guia-de-projectos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .guia-de-projectos .projecto{
+        min-width: 200px;
+        width: 28%;
+    }
+    #enter-email{
+        max-width: 700px;
+    }
+    .container-formulario-pregunta{
+        top: 50px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        height: 500px;
+    }
+}
+@media (min-width:1201px) {
+    .header-logo{
+        padding: 20px 70px;
+    }
+    #imagen-header{
+        width: 90%;
+    }
+    .guia-de-projectos{
+        display: flex;
+        flex-direction: row;
+    }
+    .guia-de-projectos .projecto{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        min-width: 300px;
+        width: 45%;
+    }
+    .guia-de-projectos #imagen-projecto{
+        max-width: 100%;
+        width: 45%;
+        margin: 0 10px;
+    }
+    #enter-email{
+        margin: 0 10px 0 0;
+        min-width: 250px;
+        width: 70%;
+    }
+    .libros-info{
+        padding: 0 70px;
+    }
+    .pie-pagina-desktop{
+        padding: 0 70px 30px;
+    }
+
+    .carrousel{
+        width: 95%;
+    }
+    .carrousel .cards-direction{
+        width: 500px;
+    }
+    .carrousel .card-reseña{
+        min-width: 55%;
+    }
+}
+
+
+@keyframes scale-in-ver-top {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+      opacity: 1;
+    }
+    50% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+      opacity: 1;
+    }
+}
+@keyframes scale-in-hor-left {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+}

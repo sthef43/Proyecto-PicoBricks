@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fa36baa1e4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <nav class="barra-abajo">
+            <figure class="boton-navegacion">
+                <i class="fa-solid fa-house" id="icono-barra"></i>
+                <p>Home</p>
+            </figure>
+            <figure class="boton-navegacion">
+                <i class="fa-solid fa-book" id="icono-barra"></i>
+                <p>E-Book</p>
+            </figure>
+            <figure class="boton-navegacion">
+                <i class="fa-solid fa-table-cells-large" id="icono-barra"></i>
+                <p>Collection</p>
+            </figure>
+            <figure class="boton-navegacion">
+                <i class="fa-solid fa-diagram-project" id="icono-barra"></i>
+                <p>Projects</p>
+            </figure>
+            <figure class="boton-navegacion">
+                <i class="fa-solid fa-bag-shopping" id="icono-barra"></i>
+                <p>Cart</p>
+            </figure>
+        </nav>
+        <header id="header"></header>
+        <div class="fondo-opaco" id="fondo-opaco"></div>
+        <section class="menu-hamburguesa">
+            <nav class="distintos-menus">
+                <div class="text-y-imagen">
+                    <h2>MENU</h2>
+                    <i class="fa-solid fa-x" id="cerrar-menu"></i>
+                </div>
+                <div class="links" id="abrir-sub-menu-shop">
+                    <a href="#">SHOP</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="links" id="abrir-sub-menu-learn">
+                    <a href="#">LEARN</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="links">
+                    <a href="">PROJECTS</a>
+                </div>
+                <div class="links">
+                    <a href="">BLOG</a>
+                </div>
+                <div class="links" id="abrir-sub-menu-education">
+                    <a href="#">EDUCATION</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="links">
+                    <i class="fa-solid fa-star"></i><a href="">NEW ON KICKSTARTER</a>
+                </div>
+                <div class="account">
+                    <i class="fa-solid fa-user"></i>
+                    <a href="">Sign in</a>
+                </div>
+                <div class="account">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <a href="">Create a account</a>
+                </div>
+                <div class="account">
+                    <i class="fa-regular fa-heart"></i>
+                    <a href="">My Wish List</a>
+                </div>
+            </nav>
+        </section>
+        <section class="menu-usuario-busqueda">
+            <div class="text-y-imagen">
+                <h2>MENU</h2>
+                <button class="cerrar-menus" id="cerrar-menus"><i class="fa-solid fa-x"></i></button>
+            </div>
+            <div class="inputs-sub-menu-buscador">
+                <input type="text" placeholder="Search products..." id="buscador-sub-menu">
+                <button id="boton-buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </section>
+        <section class="menu-usuario-mobile">
+            <div class="text-y-imagen">
+                <h2>MENU</h2>
+                <button class="cerrar-menus" id="cerrar-menus"><i class="fa-solid fa-x"></i></button>
+            </div>
+            <form action="" class="formulario-crear-usuario">
+                <label for="Email">Email Address <span>*</span></label>
+                <input type="text" id="usuario-input" name="Email" placeholder="Email Address" required>
+                <label for="password">Password <span>*</span></label>
+                <input type="password" id="usuario-input" name="password" placeholder="Password" required>
+                <button id="login-usuario">LOG IN</button>
+                <a href="">Forgot your password?</a>
+                <button id="crear-usuario">CREATE ACCOUNT</button>
+            </form>
+        </section>
+        <section class="menu-shop-mobile">
+            <div class="text-y-imagen">
+                <h2>MENU</h2>
+                <button class="cerrar-menus" id="cerrar-menus"><i class="fa-solid fa-x"></i></button>
+            </div>
+            <div class="content-menu-shop-mobil">
+                <p><span>0 Items</span></p>
+                <p>Your Cart Is Empty</p>
+                <button id="crear-usuario">CONTINUE SHOPPING</button>
+            </div>
+        </section>
+        <figure class="iconos-en-pantalla">
+            <a href="#header"><button id="botones-en-pantalla-flecha"><i class="fa-solid fa-arrow-up"></i></button></a>
+            <button id="botones-en-pantalla-pregunta"><i class="fa-solid fa-question"></i></button>
+        </figure>
+        <section class="container-formulario-pregunta">
+            <button id="cerrar-menu-formulario" class="cerrar-menus"><i class="fa-solid fa-x" style="color: #fff;"></i></button>
+            <h2 id="head-fixed">Have Qusetion?</h2>
+            <div class="text-superior-formulario">
+                <h2>ASK ANYTHING</h2>
+                <p>We will follow up with you via email within 24-36 hours</p>
+            </div>
+            <form action="" class="contenido-formulario-pregunta">
+                <div class="inputs-text">
+                    <p>Please answer the following questionnaire</p>
+                    <input type="text" name="Nombre" id="input-formulario-pregunta" class="" placeholder="Your Name">
+                    <input type="text" name="Email" id="input-formulario-pregunta" class="" placeholder="Your Mail">
+                    <input type="text" name="Telefono" id="input-formulario-pregunta" class="" placeholder="Your Phone">
+                </div>
+                <div class="inputs-radio">
+                    <p>Do You Need</p>
+                    <input type="radio" name="Pricing" id="Pricing">
+                    <label for="Pricing">Pricing</label>
+                    <input type="radio" name="Answer" id="Answer">
+                    <label for="Answer">Answer</label>
+                    <input type="radio" name="Both" id="Both">
+                    <label for="Both">Both</label>
+                </div>
+                <p>What Can I Help You With Today?</p>
+                <textarea name="otra-pregunta" id="text-area-formulario"></textarea>
+                <div class="inputs-radio">
+                <p>How Would You like Me To Contact You?</p>
+                    <input type="radio" name="Phone" id="Phone">
+                    <label for="Phone">Phone</label>
+                    <input type="radio" name="Email" id="Email">
+                    <label for="Email">Email</label>
+                    <input type="radio" name="Both" id="Both">
+                    <label for="Both">Both</label>
+                </div>
+                <button type="submit" id="boton-submit-formulario">SEND QUESTION</button>
+            </form>
+        </section>
+        <section class="sub-menus">
+            <section class="sub-menu" id="sub-menu-shop">
+                <nav class="links-menu-hamburguesa-lear">
+                    <figure class="volver-atras">
+                        <i class="fa-solid fa-arrow-left" id="cerrar-menu-shop"></i>
+                        <h2>SHOP</h2>
+                    </figure>
+                    <ul class="learn">
+                        <li><a href="">Go To Shop</a></li>
+                        <li><a href="">PicoBricks Kits|</a></li>
+                        <li><a href="">STEM Coding Toys</a></li>
+                        <li><a href="">Robotics Components</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="sub-menu" id="sub-menu-learn">
+                <nav class="links-menu-hamburguesa-lear">
+                    <figure class="volver-atras">
+                        <i class="fa-solid fa-arrow-left" id="cerrar-menu-learn"></i>
+                        <h2>LEARN</h2>
+                    </figure>
+                    <p>Go To Learn</p>
+                    <ul class="learn">
+                        <li><i class="fa-solid fa-chalkboard-user" id="iconos-dropdown"></i><a href="">How To Use</a></li>
+                        <li><i class="fa-solid fa-book" id="iconos-dropdown"></i><a href="">E-books</a></li>
+                        <li><i class="fa-solid fa-handshake" id="iconos-dropdown"></i><a href="">Community</a></li>
+                        <li><i class="fa-regular fa-file" id="iconos-dropdown"></i><a href="">Documentation</a></li>
+                        <li><i class="fa-brands fa-github" id="iconos-dropdown"></i><a href="">GitHub</a></li>
+                        <li><i class="fa-solid fa-question" id="iconos-dropdown"></i><a href="">FAQ</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="sub-menu" id="sub-menu-education">
+                <nav class="links-menu-hamburguesa-lear">
+                    <figure class="volver-atras">
+                        <i class="fa-solid fa-arrow-left" id="cerrar-menu-education"></i>
+                        <h2>LEARN</h2>
+                    </figure>
+                    <p>Go To Learn</p>
+                    <ul class="learn">
+                        <li><a href="">Go To Eduaction</a></li>
+                        <li><a href="">Educational</a></li>
+                        <li><a href="">Try PicoBricks</a></li>
+                        <li><a href="">Be Our Ambassador</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </section>
+        <header class="header-logo">
+            <figure class="logo-dektop">
+                <img src="/images/cropped-pico-bricks-logo-e1694075155583_3 (1).avif" alt="" id="logo-dektop">
+            </figure>
+            <button id="run-ide">RUN-IDE</button>
+        </header>
+        <nav class="nav-bar-desktop">
+            <ul class="links-navbar">
+                <li><a href="">SHOP</a></li>
+                <li class="link-dropdwon">
+                    <a href="" id="">LEARN</a>
+                        <ul class="dropdown">
+                            <li><i class="fa-solid fa-chalkboard-user" id="iconos-dropdown"></i><a href="">How To Use</a></li>
+                            <li><i class="fa-solid fa-book" id="iconos-dropdown"></i><a href="">E-books</a></li>
+                            <li><i class="fa-solid fa-handshake" id="iconos-dropdown"></i><a href="">Community</a></li>
+                            <li><i class="fa-regular fa-file" id="iconos-dropdown"></i><a href="">Documentation</a></li>
+                            <li><i class="fa-brands fa-github" id="iconos-dropdown"></i><a href="">GitHub</a></li>
+                            <li><i class="fa-solid fa-question" id="iconos-dropdown"></i><a href="">FAQ</a></li>
+                        </ul>
+                </li>
+                <li><a href="">PROJECTS</a></li>
+                <li><a href="">BLOG</a></li>
+                <li class="link-dropdwon">
+                    <a href="">EDUCTION</a>
+                        <ul class="dropdown">
+                            <li><a href="">Educational</a></li>
+                            <li><a href="">Try PicoBricks</a></li>
+                            <li><a href="">Be Our Ambassador</a></li>
+                        </ul>
+                </li>
+                <li><i class="fa-solid fa-star"></i><a href="">NEW ON KICKSTARTER</a></li>
+            </ul>
+            <div class="menu-rapido">
+                <a href="" id="sign-in">Sign IN</a>
+                <i class="fa-solid fa-magnifying-glass" id="iconos-navbar"></i>
+                <i class="fa-regular fa-heart" id="iconos-navbar"></i>
+                <i class="fa-solid fa-cart-shopping" id="iconos-navbar"></i>
+            </div>
+        </nav>
+        <nav class="nav-bar-mobile">
+            <div>
+                <i class="fa-solid fa-bars" style="color: #000000;" id="barras-menu"></i>
+                <i class="fa-sharp fa-solid fa-magnifying-glass" style="color: #000000;" id="busqueda-menu"></i>
+            </div>
+            <img src="/images/cropped-pico-bricks-logo-e1694075155583_3.avif" alt="" id="logo">
+            <div>
+                <i class="fa-solid fa-user" style="color: #000000;" id="usuario-menu"></i>
+                <i class="fa-solid fa-cart-shopping" style="color: #000000;" id="shop-menu"></i>
+            </div>
+        </nav>
+        <figure class="imagen-header">
+            <img src="/images/best-stem-kit-picobricks.webp" alt="" id="imagen-header">
+        </figure>
+        <section class="description">
+            <div class="text-descripcion">
+                <h2 id="text-multiple-color">Best Raspberry Pi STEM  Robotics Kit</h2>
+                <h1>The Fastest and Easiest Way to Learning Python Robotic Coding</h1>
+                <p>PicoBricks Is A Fantastic Robotic Project Development Kit For STEM Educators And Makers Of All Levels. No Soldering And Wiring. There Is Unlimited Creativity!</p>
+                    <div class="botones-inicio">
+                        <button id="boton-naranja">Watch Video</button>
+                        <button id="boton-amarillo">Get Start Today</button>
+                    </div>
+            </div>
+            <img src="/images/ezgif.com-optimize_500x.webp" alt="" id="robot-saludando">
+        </section>
+        <section class="products">
+            <figure class="product">
+                <p id="descuento">-62%</p>
+                <img src="/images/main-picoboard.webp" alt="" id="image-product">
+                <h2>PicoBricks Main Board: Meet Robotic Coding</h2>
+                <h2 id="precio">$29.99</h2>
+                <h2><span class="tachado">$79.00</span></h2>
+                <button id="adicion-car-button">Add To Cart</button>
+            </figure>
+            <figure class="product">
+                <p id="descuento">-62%</p>
+                <img src="/images/start-robotic-project-kit.webp" alt="" id="image-product">
+                <h2>PicoBricks Base Kit: Robotics Project Starter Kit</h2>
+                <h2 id="precio">$69.00</h2>
+                <h2><span class="tachado">$89.99</span></h2>
+                <button id="adicion-car-button">Add To Cart</button>
+            </figure>
+            <figure class="product">
+                <p id="descuento">-62%</p>
+                <img src="/images/iot-project-kits.webp" alt="" id="image-product">
+                <h2>PicoBricks IoT Expert Kit: Start Learn LoT Projects</h2>
+                <h2 id="precio">$108.99</h2>
+                <h2><span class="tachado">$120.00</span></h2>
+                <button id="adicion-car-button">Add To Cart</button>
+            </figure>
+            <figure class="product">
+                <p id="descuento">-62%</p>
+                <img src="/images/all-in-one-robotic-kit.webp" alt="" id="image-product">
+                <h2>PicoBricks Zero To Hero Kit: All in One Robotic Kit</h2>
+                <h2 id="precio">$119.99</h2>
+                <h2><span class="tachado">$129.00</span></h2>
+                <button id="adicion-car-button">Add To Cart</button>
+            </figure>
+        </section>
+        <section class="description-picopark">
+            <figure class="placa-y-robot">
+                <img src="/images/2_Nci_sayfa_picobricks_maskot.webp" alt="" id="placa-y-robot">
+            </figure>
+            <div class="text-descripcion-picopark">
+                <h2>What is PicoBricks?</h2>
+                <p>PicoBricks is a <strong>Raspberry Pi Pico</strong> based electronic development board and software designed to speed up the process of learning robotic programming and make maker projects easy, ideal for <strong>building robot</strong> applications and Raspberry Pi robotics projects. It is programmable and perfect for <strong>STEM learning</strong>, offering <strong>block based coding</strong> capabilities. There are 12 removable modules on PicoBricks, making it a versatile and adaptable tool. This makes it a tool with unlimited possibilities for your projects, especially when integrated with <strong>Python</strong> programming.</p>
+            </div>
+            <h2 id="text-multiple-color">What Makers Say</h2>
+        </section>
+        <section class="caracteristicas">
+        <section class="carrousel">
+                <h1>User Reviews</h1>
+                    <div class="cards-direction">
+                        <div class="card-reseña">
+                            <figure><img src="/images/raspberry_pi_kits.webp" alt="" id="imagen-carrusel"></figure>
+                            <h2>Emt5903</h2>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <p>This is a great set for anyone just starting out learning to program. The kid comes with everything you need, there's even a tiny screen.</p>
+                        </div>
+                        <div class="card-reseña">
+                            <figure><img src="/images/raspberry_pi_kits.webp" alt="" id="imagen-carrusel"></figure>
+                            <h2>Emt5903</h2>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <p>This is a great set for anyone just starting out learning to program. The kid comes with everything you need, there's even a tiny screen.</p>
+                        </div>
+                        <div class="card-reseña">
+                            <figure><img src="/images/raspberry_pi_kits.webp" alt="" id="imagen-carrusel"></figure>
+                            <h2>Emt5903</h2>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <p>This is a great set for anyone just starting out learning to program. The kid comes with everything you need, there's even a tiny screen.</p>
+                        </div>
+                        <div class="card-reseña">
+                            <figure><img src="/images/raspberry_pi_kits.webp" alt="" id="imagen-carrusel"></figure>
+                            <h2>Emt5903</h2>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <p>This is a great set for anyone just starting out learning to program. The kid comes with everything you need, there's even a tiny screen.</p>
+                        </div>
+                        <div class="card-reseña">
+                            <figure><img src="/images/raspberry_pi_kits.webp" alt="" id="imagen-carrusel"></figure>
+                            <h2>Emt5903</h2>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <p>This is a great set for anyone just starting out learning to program. The kid comes with everything you need, there's even a tiny screen.</p>
+                        </div>
+                        <div class="card-reseña">
+                            <figure><img src="/images/raspberry_pi_kits.webp" alt="" id="imagen-carrusel"></figure>
+                            <h2>Emt5903</h2>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <p>This is a great set for anyone just starting out learning to program. The kid comes with everything you need, there's even a tiny screen.</p>
+                        </div>
+                        
+                    </div>
+        </section>
+                <figure class="caracteristicas-ide"><img src="/images/Ide_Blogu_scroll_4.png" alt="" id="Ide"></figure>
+                <div class="caracteristicas-texto">
+                    <h2 id="text-multiple-color">The Ultimate STEM Robotics Coding Kits For Kids</h2>
+                    <h2>Learn Python With Block Based Programming</h2>
+                    <p>PicoBrics IDE brings the excitement of robotics into <span>classrooms</span> and homes with its user-friendly <span>block based programming </span>language. Perfect for <span>beginners, schools,</span> and <span>teachers,</span> this innovative platform transforms the challenge of learning code into a playful experience with coding with blocks. Aimed at nurturing the young minds of kids, PicoBrics makes <span>Raspberry Pi robotic projects</span> more accessible and engaging. Dive into the world of robotics with our easy-to use <span></span> and foster STEM skills in a creative and interactive way. </p>
+                </div>
+                <figure>
+                    <img src="/images/scrool_5_maskot_kopya_129cc4cc-ec85-435b-bd2e-55da01248cd1.webp" alt="" id="robot-placa-mano">
+                </figure>
+        </section>
+        <section class="info-producto">
+                <article class="info">
+                    <figure id="img-info"><i class="fa-solid fa-bag-shopping"></i></figure>
+                    <h2>Easy Portable</h2>
+                    <p>PicoBricks is easy to take with you thanks to its small size and cloth carrying case. The lack of tangled cables makes it easy to use anywhere.</p>
+                </article>
+                <article class="info">
+                    <figure id="img-info"><i class="fa-solid fa-helmet-safety"></i></figure>
+                    <h2>Safe for Children</h2>
+                    <p>PicoBricks is easy to take with you thanks to its small size and cloth carrying case. The lack of tangled cables makes it easy to use anywhere.</p>
+                </article>
+                <article class="info">
+                    <figure id="img-info"><i class="fa-solid fa-wifi"></i></figure>
+                    <h2>Safe for Children</h2>
+                    <p>PicoBricks is easy to take with you thanks to its small size and cloth carrying case. The lack of tangled cables makes it easy to use anywhere.</p>
+                </article>
+                <article class="info">
+                    <figure id="img-info"><i class="fa-solid fa-square-check"></i></figure>
+                    <h2>No More Errors</h2>
+                    <p>PicoBricks is easy to take with you thanks to its small size and cloth carrying case. The lack of tangled cables makes it easy to use anywhere.</p>
+                </article>
+                <article class="info">
+                    <figure id="img-info"><i class="fa-brands fa-connectdevelop"></i></figure>
+                    <h2>Easy Connection</h2>
+                    <p>Micro USB, Battery Input, Extra sensor, motor etc. connection headers, RGB LED Connection, Protoboard, DC motor and relay connection terminals, Servo motor connections, Easy Connector, Bluetooth connection connector.</p>
+                </article>
+                <article class="info">
+                    <figure id="img-info"><i class="fa-solid fa-puzzle-piece"></i></figure>
+                    <h2>Detachable</h2>
+                    <p>PicoBricks can be separated into modules for your more advanced projects. But don't worry, once you've separated the modules, you can put them back together again on the base plate.</p>
+                </article>
+                <h2 id="text-multiple-color">Project Guide</h2>
+        </section>
+        </section>
+        <section class="guia-de-projectos">
+            <figure class="projecto">
+                <img src="/images/weather-station-project_2b277a45-940b-4214-b69f-7f17135258a1.webp" alt="" id="imagen-projecto">
+                <div class="text-project">
+                    <h2>DIY Weather Station Project</h2>
+                    <p>In the DIY Weather Station Project using the Raspberry Pi kit from Picobricks, participants embark on an exciting journey to build their own weather station. This hands-on project leverages the… More</p>
+                </div>
+            </figure>
+            <figure class="projecto">
+                <img src="/images/1-1-768x768.jpg" alt="" id="imagen-projecto">
+                <div class="text-project">
+                    <h2>#1 Get Started With PicoBricks - PicoBlink</h2>
+                    <p>There are 1 x 5mm red LED and 1 x WS2812B RGB LED on Picobricks. While normal LEDs can light up in one color, RGB colors can light up in… More</p>
+                </div>
+            </figure>
+            <figure class="projecto">
+                <img src="/images/2-1-768x768.jpg" alt="" id="imagen-projecto">
+                <div class="text-project">
+                    <h2>#2 Action - Reaction Project With PicoBricks</h2>
+                    <p>Different types of buttons are used in electronic systems. Locked buttons, push buttons, switched buttons… There is 1 push button on Picobricks. They work like a switch, they conduct current… More</p>
+                </div>
+            </figure>
+            <figure class="projecto">
+                <img src="/images/remote_test.webp" alt="" id="imagen-projecto">
+                <div class="text-project">
+                    <h2>Remote Test Project</h2>
+                    <p>The aim of this code was to create an interactive application using the PicoBricks to integrate an IR remote control and an OLED display. Through this process, you will...More</p>
+                </div>
+            </figure>
+            <figure class="projecto">
+                <img src="/images/WhatsApp_Image_2023-11-27_at_16.33.12.webp" alt="" id="imagen-projecto">
+                <div class="text-project">
+                    <h2>Truth Or Dare Project</h2>
+                    <p>Today, we invite you to elevate the experience of a traditional game – “Truth or Dare” – by integrating it with Raspberry Pi and an OLED display. Now, you can embrace the… More</p>
+                </div>
+            </figure>
+            <figure class="projecto">
+                <img src="/images/Calculator.webp" alt="" id="imagen-projecto">
+                <div class="text-project">
+                    <h2>Electronics Calculator Project</h2>
+                    <p>Now, we have something truly amazing to share with you: the Electronics Calculator! This groundbreaking project is about to revolutionize the way we approach math problem-solving. Picture this: you're sitting at… More</p>
+                </div>
+            </figure>
+            <button id="boton-naranja">See All Projects</button>
+        </section>
+        <section class="plataformas-desarrollo">
+            <h2 id="text-multiple-color">Integrated Development Platforms</h2>
+            <figure class="img-plataformas">
+                <img src="/images/Bricks_Ide_logo.png" alt="" id="img-marca">
+                <img src="/images/micropython_logo.png" alt="" id="img-marca">
+                <img src="/images/microblocks_logo.png" alt="" id="img-marca">
+                <img src="/images/Th_logo.png" alt="" id="img-marca">
+                <img src="/images/arduino_logo.png" alt="" id="img-marca">
+            </figure>
+        </section>
+        <section class="libros-info">
+            <h2 id="text-multiple-color">Best Coding Book for beginners</h2>
+            <p>Picobricks, the Raspberry Pi-powered <span>STEM robotics kit</span>, comes with three complimentary e-books, each tailored to enhance your coding journey.<br>
+                <span>The Teacher Book</span> is the best book to learn coding strategies for educators, perfect for those looking to teach Picobricks activities in the classroom.<br>
+                <span>The Project Book</span> details various projects you can build with the kit, ideal for beginners and anyone eager to learn how to code. Lastly, th.<br>
+                <span>IDE Book</span> offers a comprehensive guide to the BricksIDE, a block-based programming environment designed for children's education and those seeking a good foundation in robotics coding</p>
+            <figure class="img-books">
+                <img src="/images/teacher-book-1_1.jpg" alt="" id="img-books-individual">
+                <img src="/images/web-project-book-3_1.jpg" alt="" id="img-books-individual">
+                <img src="/images/ide-kapak-scaled_1.jpg" alt="" id="img-books-individual">
+            </figure>
+        </section>
+
+        <footer class="pie-pagina-mobile">
+            <div class="menu-desplegable">
+                <div class="text-menu">
+                    <h2>USEFUL LINKS</h2>
+                    <h2>+</h2>
+                </div>
+                <nav class="links-desplegables">
+                    <a href="">Search</a>
+                    <a href="">Learn</a>
+                    <a href="">Contact Information</a>
+                    <a href="">GitHub</a>
+                    <a href="">Buy PicoBricks</a>
+                    <a href="">Community</a>
+                    <a href="">Wholesael</a>
+                </nav>
+            </div>
+            <div class="menu-desplegable">
+                <div class="text-menu">
+                    <h2>LEGAL CONTENT</h2>
+                    <h2>+</h2>
+                </div>
+                <nav class="links-desplegables">
+                    <a href="">Search</a>
+                    <a href="">Learn</a>
+                    <a href="">Contact Information</a>
+                    <a href="">GitHub</a>
+                    <a href="">Buy PicoBricks</a>
+                    <a href="">Community</a>
+                    <a href="">Wholesael</a>
+                </nav>
+            </div>
+            <div class="text-pie">
+                <h2>NEWSLETTER SIGN UP</h2>
+                <p>Sign up for exclusive updates, new arrivals & insider only discounts</p>
+            </div>
+            <div class="inputs-pie">
+                <input type="text" placeholder="Enter your email address" id="enter-email">
+                <button id="submit">SUBMIT</button>
+            </div>
+            <div class="icon-socials">
+                <i class="fa-brands fa-facebook" id="social-icon"></i>
+                <i class="fa-brands fa-instagram" id="social-icon"></i>
+                <i class="fa-brands fa-youtube" id="social-icon"></i>
+                <i class="fa-brands fa-twitter" id="social-icon"></i>    
+            </div>
+        </footer>
+        <footer class="pie-pagina-desktop">
+            <nav class="links-pagina-pie">
+                <ul class="useful-links">
+                    <h2>USEFUL LINKS</h2>
+                    <li><a href="">Search</a></li>
+                    <li><a href="">Learn</a></li>
+                    <li><a href="">Contact Information</a></li>
+                    <li><a href="">GitHub</a></li>
+                    <li><a href="">Buy PicoBricks</a></li>
+                    <li><a href="">Community</a></li>
+                    <li><a href="">Wholesale</a></li>
+                </ul>
+                <ul class="legal">
+                    <h2>LEGAL CONTENTS</h2>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Refund Policy</a></li>
+                    <li><a href="">Sales Agreement</a></li>
+                    <li><a href="">Shipping Policy</a></li>
+                    <li><a href="">Terms Of Service</a></li>
+                </ul>
+            </nav>
+            <div class="inputs-desktop">
+                <h2>NEWSLETTER SIGN UP</h2>
+                <p>Sign up for exclusive updates, new arrivals & insiders only discounts</p>
+                <div class="ingresar-email">
+                    <input type="text" id="enter-email" placeholder="Enter your email address">
+                    <button id="submit">SUBMIT</button>
+                </div>
+                <div class="icon-socials">
+                    <i class="fa-brands fa-facebook" id="social-icon"></i>
+                    <i class="fa-brands fa-instagram" id="social-icon"></i>
+                    <i class="fa-brands fa-youtube" id="social-icon"></i>
+                    <i class="fa-brands fa-twitter" id="social-icon"></i>    
+                </div>
+            </div>
+        </footer>
+
+    </main>
+</body>
+<script src="/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
